@@ -1,5 +1,4 @@
 """Grading script"""
-import pytest
 
 
 def load_data():
