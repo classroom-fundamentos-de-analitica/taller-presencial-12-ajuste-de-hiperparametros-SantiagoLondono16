@@ -14,12 +14,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Install dependencies
+      run: pip install -r requirements.txt
     - name: hello world test
       id: hello-world-test
       uses: education/autograding-python-grader@v1
       with:
         timeout: 10
-        max-score: 98
+        max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: Autograding Reporter
       uses: education/autograding-grading-reporter@v1
