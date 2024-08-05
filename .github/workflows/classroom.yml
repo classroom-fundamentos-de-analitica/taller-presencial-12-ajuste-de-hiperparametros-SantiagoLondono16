@@ -21,7 +21,7 @@ jobs:
         max-score: 1
         setup-command: pip3 install -r requirements.txt
         entryPoint: pytest
-        args: test.py
+        args: test/test.py
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
